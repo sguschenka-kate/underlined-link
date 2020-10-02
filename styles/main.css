@@ -1,0 +1,72 @@
+body {
+  font-family: "Indie Flower", cursive;
+  font-size: 24px;
+}
+h1 {
+  color: #666666;
+  text-align: center;
+}
+
+.nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #fffdd0aa;
+  width: 410px;
+  margin: 0 auto;
+  border-radius: 5%;
+  border: 1px solid #666666aa;
+}
+
+.nav__item {
+  text-align: center;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #666666;
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow {
+  color: #8a3324;
+}
+
+.nav__link--left:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #8a3324aa;
+  position: absolute;
+  left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  transition: width 0.4s ease-in-out; /*задаём время анимации*/
+}
+
+.nav__link--right:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #8a3324aa;
+  position: absolute;
+  right: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  transition: width 0.4s ease-in-out; /*задаём время анимации*/
+}
+
+.nav__link--center:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #8a3324aa;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  transition: width 0.4s ease-in-out; /*задаём время анимации*/
+}
+
+a:hover:after {
+  width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
